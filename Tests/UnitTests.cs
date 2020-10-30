@@ -86,7 +86,9 @@ namespace TravisCILab
             Assert.AreEqual(0.5, Program.Divide("1", "2"));
             Assert.AreEqual(-1, Program.Divide("3", "-3"));
             // This test is intentionally Wrong
-            Assert.AreEqual(0, Program.Divide("5", "0"));
+            // Assert.AreEqual(0, Program.Divide("5", "0"));
+            // Fix wrong test
+            Assert.AreEqual(double.PositiveInfinity, Program.Divide("5", "0"));
         }
 
         [Test]
